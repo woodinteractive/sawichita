@@ -7,7 +7,7 @@
     @apply text-lg px-5 py-3 rounded-md inline-block;
   }
   .btn-primary {
-    @apply bg-sky-600 hover:bg-sky-400 text-white;
+    @apply bg-teal-600 hover:bg-teal-400 text-white;
   }
   .btn-secondary {
     @apply outline-teal-600 hover:outline-teal-400 text-teal-600;
