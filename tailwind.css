@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @layer components {
-  .btn {
-    @apply text-lg px-5 py-3 rounded-md inline-block;
-  }
-  .btn-primary {
-    @apply bg-teal-600 hover:bg-teal-400 text-white;
-  }
-  .btn-secondary {
-    @apply outline-teal-600 hover:outline-teal-400 text-teal-600;
-  }
-  .link {
-    @apply text-teal-700 hover:text-teal-500;
-  }
+	.btn {
+		@apply inline-block rounded-md px-5 py-3 text-sm sm:text-lg;
+	}
+	.btn-primary {
+		@apply bg-teal-600 text-white hover:bg-teal-400;
+	}
+	.btn-secondary {
+		@apply text-teal-600 outline-teal-600 hover:outline-teal-400;
+	}
+	.link {
+		@apply text-teal-700 hover:text-teal-500;
+	}
 }
