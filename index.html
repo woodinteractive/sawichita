@@ -27,7 +27,7 @@
 	<body class="text-md flex min-h-screen flex-col text-pretty text-slate-700">
 		<header
 			id="top"
-			class="relative z-10 bg-sky-900 bg-opacity-90 bg-[url('../assets/support-group-bw.jpg')] bg-cover pb-16 text-white bg-blend-multiply"
+			class="relative z-40 bg-sky-900 bg-opacity-90 bg-[url('../assets/support-group-bw.jpg')] bg-cover pb-16 text-white bg-blend-multiply"
 			x-data="{ navActive: false }"
 			x-intersect.threshold.90="navActive = false"
 			x-intersect:leave.threshold.90="navActive = true">
@@ -67,7 +67,7 @@
 					</a>
 					<div
 						x-data
-						class="fixed inset-x-0 bottom-0 mt-3 flex items-center justify-between space-x-6 bg-white px-6 py-3 text-xs text-slate-800 shadow-[0_-1px_4px_rgba(0,0,0,0.2)] md:relative md:bg-transparent md:px-0 md:py-0 md:text-base md:text-inherit md:shadow-none">
+						class="fixed inset-x-0 bottom-0 mt-3 flex items-center justify-between space-x-6 bg-white px-6 py-3 text-xs text-slate-800 shadow-[0_-1px_4px_rgba(0,0,0,0.2)] md:relative md:mt-0 md:bg-transparent md:px-0 md:py-0 md:text-base md:text-inherit md:shadow-none">
 						<a href="#about">About SA</a>
 						<a href="#newcomers">For Newcomers</a>
 						<a href="#assessment">Self-Assessment</a>
@@ -103,59 +103,47 @@
 			</div>
 		</header>
 		<main class="flex-grow">
-			<section id="about" class="relative bg-white">
+			<section id="about" class="relative z-30 bg-white">
 				<div
 					class="mx-auto -mt-6 w-full max-w-screen-lg px-6 py-16 md:-mt-12 md:pb-12 md:pt-24">
-					<div>
-						<a href="#about" class="group mb-6 inline-flex items-end">
-							<span
-								class="mr-2 font-sans text-xl font-bold text-slate-300 group-hover:text-teal-700 sm:text-3xl"
-								>#</span
-							>
-							<h2 class="font-display text-4xl font-bold sm:text-5xl"
-								>About Us</h2
-							>
-						</a>
+					<a href="#about" class="group mb-6 inline-flex items-end">
+						<span
+							class="mr-2 font-sans text-xl font-bold text-slate-300 group-hover:text-teal-700 sm:text-3xl"
+							>#</span
+						>
+						<h2 class="font-display text-4xl font-bold sm:text-5xl"
+							>About Us</h2
+						>
+					</a>
+
+					<div class="space-y-4">
 						<video
 							controls
-							class="mb-4 w-full rounded-lg"
+							class="mb-4 w-full rounded-lg md:float-right md:ml-4 md:w-1/2"
 							src="./assets/sa-overview.mp4"
 							type="video/mp4"
 							poster="./assets/overview_thumbnail.jpg">
 						</video>
-						<div class="space-y-4">
-							<p
-								>We have a solution. We don't claim it's for everybody, but for
-								us, it works. If you identify with us and think you may share
-								our problem, we'd like to share our solution with you
-								(Sexaholics Anonymous, 2).</p
-							>
-							<p>
-								The only requirement for SA membership is a desire to stop
-								lusting and become sexually sober according to the SA sobriety
-								definition. Any two or more sexaholics gathered together for SA
-								sobriety according to the SA sobriety definition may call
-								themselves an SA group. Meetings that do not adhere to and
-								follow Sexaholics Anonymous' sobriety statement as set forth in
-								the foregoing Statement of Principle adopted by the General
-								Delegate Assembly in 2010 are not SA meetings and shall not call
-								themselves SA meetings. Addendum to the Statement of Principle
-								passed by the General Delegate Assembly on July 2016.
-							</p>
-						</div>
-						<div class="mt-4">
-							<h3 class="mb-6 font-display text-2xl font-bold sm:text-3xl"
-								>A History of SA</h3
-							>
-							<video
-								controls
-								src="./assets/sa-history.mp4"
-								type="video/mp4"
-								poster="./assets/history_thumbnail.jpg"
-								class="mb-4 w-full rounded-lg"></video>
-						</div>
+						<p
+							>We have a solution. We don't claim it's for everybody, but for
+							us, it works. If you identify with us and think you may share our
+							problem, we'd like to share our solution with you (Sexaholics
+							Anonymous, 2).</p
+						>
+						<p>
+							The only requirement for SA membership is a desire to stop lusting
+							and become sexually sober according to the SA sobriety definition.
+							Any two or more sexaholics gathered together for SA sobriety
+							according to the SA sobriety definition may call themselves an SA
+							group. Meetings that do not adhere to and follow Sexaholics
+							Anonymous' sobriety statement as set forth in the foregoing
+							Statement of Principle adopted by the General Delegate Assembly in
+							2010 are not SA meetings and shall not call themselves SA
+							meetings. Addendum to the Statement of Principle passed by the
+							General Delegate Assembly on July 2016.
+						</p>
 					</div>
-					<div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+					<div class="mt-8 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
 						<div>
 							<h3 class="mb-6 font-display text-2xl font-bold sm:text-3xl">
 								The Twelve Steps
@@ -282,7 +270,7 @@
 			</section>
 			<section
 				id="newcomers"
-				class="relative -z-20 bg-teal-900 bg-[url('../assets/quick-links.jpg')] bg-contain bg-right bg-no-repeat text-white bg-blend-multiply">
+				class="relative z-20 bg-teal-900 bg-[url('../assets/quick-links.jpg')] bg-contain bg-right bg-no-repeat text-white bg-blend-multiply">
 				<div
 					class="mx-auto -mt-6 w-full max-w-screen-lg px-6 py-16 md:-mt-12 md:pb-12 md:pt-24">
 					<div>
@@ -296,6 +284,12 @@
 							>
 						</a>
 						<div class="space-y-4">
+							<video
+								controls
+								src="./assets/sa-history.mp4"
+								type="video/mp4"
+								poster="./assets/history_thumbnail.jpg"
+								class="mb-4 w-full rounded-lg md:float-right md:my-0 md:mb-4 md:ml-4 md:w-1/2"></video>
 							<p>
 								Sexaholics Anonymous is a fellowship of men and women who share
 								their experience, strength, and hope with each other that they
@@ -392,7 +386,7 @@
 			</section>
 			<section
 				id="assessment"
-				class="relative -z-30 bg-white bg-opacity-80 bg-[url('../assets/group-alt.jpg')] bg-cover bg-blend-screen">
+				class="relative z-10 bg-white bg-opacity-80 bg-[url('../assets/group-alt.jpg')] bg-cover bg-blend-screen">
 				<div
 					class="mx-auto -mt-10 w-full max-w-screen-lg px-6 py-16 md:-mt-12 md:pb-12 md:pt-24">
 					<a
