@@ -1533,6 +1533,38 @@ select {
     font-size: 14px;
   }
 
+  .md\:text-\[3rem\] {
+    font-size: 3rem;
+  }
+
+  .md\:text-\[6rem\] {
+    font-size: 6rem;
+  }
+
+  .md\:text-\[4rem\] {
+    font-size: 4rem;
+  }
+
+  .md\:text-\[5rem\] {
+    font-size: 5rem;
+  }
+
+  .md\:text-\[4\.25rem\] {
+    font-size: 4.25rem;
+  }
+
+  .md\:text-\[4\.125rem\] {
+    font-size: 4.125rem;
+  }
+
+  .md\:leading-tight {
+    line-height: 1.25;
+  }
+
+  .md\:leading-\[1\.15\] {
+    line-height: 1.15;
+  }
+
   .md\:text-inherit {
     color: inherit;
   }
